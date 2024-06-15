@@ -3,7 +3,6 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/footer";
 import { NavBar } from "@/components/navbar";
-import { Container } from "@/components/ui/container";
 
 const font = Urbanist({ subsets: ["latin"] });
 
