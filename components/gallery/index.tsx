@@ -11,7 +11,7 @@ interface GalleryProps {
 export function Gallery({ images }: GalleryProps) {
   return (
     <TabGroup as="div" className="flex flex-col-reverse">
-      <div className="mx-auto mt-6 w-full lg:max-w-none max-w-2xl sm:block hidden">
+      <div className="mx-auto mt-6 w-full lg:max-w-none max-w-2xl">
         <TabList className="grid grid-cols-4 gap-6">
           {images.map((image) => (
             <GalleryTab key={image.id} image={image} />
