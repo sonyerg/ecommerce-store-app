@@ -31,8 +31,16 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
         {/* Modal */}
         <div className="fixed inset-0 overflow-y-auto">
           <div className="flex h-full items-center justify-center p-4">
-            <TransitionChild as={Fragment}>
-              <DialogPanel className="max-w-3xl overflow-hidden rounded-lg ">
+            <TransitionChild
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <DialogPanel className="w-full max-w-3xl overflow-hidden rounded-lg align-middle text-left">
                 <div className="relative flex items-center w-full overflow-hidden bg-white px-4 shadow-2xl">
                   <div className="absolute right-4 top-4 z-10">
                     <IconButton onClick={onClose} icon={<X size={20} />} />
