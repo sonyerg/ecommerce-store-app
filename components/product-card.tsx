@@ -22,10 +22,10 @@ export function ProductCard({ product }: ProductCardProps) {
     router.push(`/products/${product.id}`);
   }
 
-  function onPreview(event: React.MouseEvent<HTMLButtonElement>) {
+  const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
     previewModal.onOpen(product);
-  }
+  };
 
   return (
     <div

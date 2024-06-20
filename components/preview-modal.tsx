@@ -6,7 +6,7 @@ import { Gallery } from "./gallery";
 import { ProductInfo } from "./product-info";
 
 export function PreviewModal() {
-  const { onOpen, isOpen, onClose } = usePreviewModal();
+  const { isOpen, onClose } = usePreviewModal();
   const product = usePreviewModal((state) => state.product);
 
   if (!product) {
