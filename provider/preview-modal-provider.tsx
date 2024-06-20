@@ -15,8 +15,8 @@ export default function PreviewModalProvider() {
   }
 
   return (
-    <div>
+    <>
       <PreviewModal />
-    </div>
+    </>
   );
 }
