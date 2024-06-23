@@ -7,7 +7,7 @@ import { Product } from "@/types";
 interface CartStore {
   products: Product[];
   addItem: (product: Product) => void;
-  removeItem: (id: string) => void;
+  removeItem: (productId: string) => void;
   removeAll: () => void;
 }
 
@@ -28,9 +28,12 @@ const useCart = create(
         set({ products: [...currentItems, product] });
         toast.success("Item added to cart.");
       },
-      removeItem: (id: string) => {
+      removeItem: (productId: string) => {
         const currentItems = get().products;
-        const filteredItems = currentItems.filter((item) => item.id !== id);
+        const filteredItems = currentItems.filter(
+          (item) => item.id !== productId
+        );
+
         set({ products: [...filteredItems] });
         toast.success("Item removed from cart.");
       },
