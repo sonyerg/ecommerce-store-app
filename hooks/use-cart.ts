@@ -22,7 +22,7 @@ const useCart = create(
         );
 
         if (existingItem) {
-          return toast("Item already in cart.");
+          return toast.error("Item already in cart.");
         }
 
         set({ products: [...currentItems, product] });
