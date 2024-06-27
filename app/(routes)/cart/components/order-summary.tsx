@@ -51,7 +51,11 @@ export default function OrderSummary() {
           <Currency value={totalPrice} />
         </div>
       </div>
-      <Button onClick={onCheckout} className="w-full mt-6">
+      <Button
+        disabled={products.length === 0}
+        onClick={onCheckout}
+        className="w-full mt-6"
+      >
         Checkout
       </Button>
     </div>

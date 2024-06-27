@@ -17,11 +17,14 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           w-auto 
           rounded-full 
           border-transparent 
-          px-5 py-3 
+          px-5 
+          py-3 
           font-semibold 
           text-white 
           hover:opacity-75 
-          transition`,
+          transition
+          disabled:cursor-not-allowed
+          disabled:opacity-50`,
           className
         )}
         disabled={disabled}

@@ -9,12 +9,11 @@ import OrderSummary from "./components/order-summary";
 
 export default function CartPage() {
   const [isMounted, setIsMounted] = useState(false);
+  const cart = useCart();
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
-  const cart = useCart();
 
   if (!isMounted) {
     return null;
@@ -32,7 +31,7 @@ export default function CartPage() {
           <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start gap-x-12">
             <div className="lg:col-span-7">
               {cart.products.length === 0 && (
-                <p className="text-neutral-500 pl-4">No items added to cart</p>
+                <p className="text-neutral-500 pl-1">No items added to cart</p>
               )}
 
               <ul>
